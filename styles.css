@@ -474,7 +474,58 @@ button:focus-visible {
 }
 
 .job-main .tags {
+  margin-top: 10px;
+}
+
+.job-points {
+  display: grid;
+  gap: 10px;
   margin-top: 14px;
+  max-width: 42em;
+}
+
+.job-points li {
+  position: relative;
+  padding-left: 20px;
+}
+
+.job-points li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 0.7em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+/* ---------- Stats ---------- */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin: 36px 0 0;
+}
+
+.stat {
+  padding-top: 16px;
+  border-top: 2px solid var(--accent);
+}
+
+.stat dt {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.3rem;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+.stat dd {
+  margin: 6px 0 0;
+  font-size: 14.5px;
+  line-height: 1.45;
+  color: var(--muted);
 }
 
 /* ---------- Cards, tags ---------- */
@@ -637,6 +688,10 @@ button:focus-visible {
   }
   .section-title {
     position: static;
+  }
+  .stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 16px;
   }
 }
 
