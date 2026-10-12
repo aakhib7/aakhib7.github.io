@@ -1229,3 +1229,38 @@ button:focus-visible {
     flex-direction: column;
   }
 }
+
+/* ---------- About: three pillars ---------- */
+.pillars {
+  list-style: none;
+  padding: 0;
+  margin: 22px 0 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.pillars li {
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+}
+
+.pillars strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.pillars span {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 640px) {
+  .pillars {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
