@@ -1166,3 +1166,66 @@ button:focus-visible {
     display: none;
   }
 }
+
+/* ---------- Projects ---------- */
+.project p + .project-points {
+  margin-top: 14px;
+}
+
+.project a:not(.btn) {
+  color: var(--accent);
+}
+
+.project-points {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+  display: grid;
+  gap: 8px;
+}
+
+.project-points li {
+  position: relative;
+  padding-left: 18px;
+  color: var(--muted);
+}
+
+.project-points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 7px;
+  height: 7px;
+  border-radius: 2px;
+  background: var(--accent);
+}
+
+.project-points strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.project code {
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+}
+
+@media (max-width: 640px) {
+  .footer-inner {
+    flex-direction: column;
+  }
+}

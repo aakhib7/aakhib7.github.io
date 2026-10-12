@@ -38,6 +38,18 @@
     });
   }
 
+  // Never leave content hidden: reveal everything shortly after load and before
+  // printing, so screenshots, link previews and recruiter tools see the full page.
+  function revealAll() {
+    items.forEach(function (item) {
+      item.classList.add('is-visible');
+    });
+  }
+  window.addEventListener('load', function () {
+    setTimeout(revealAll, 1200);
+  });
+  window.addEventListener('beforeprint', revealAll);
+
   var year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
 })();
