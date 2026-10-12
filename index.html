@@ -15,6 +15,9 @@
       if (saved) document.documentElement.setAttribute('data-theme', saved);
     } catch (e) {}
     document.documentElement.classList.add('js');
+    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('motion');
+    }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -62,8 +65,8 @@
 
       <h1 class="stagger hero-title" aria-label="I get merchants live on payments, faster.">
         <span class="ln" style="--c:1;--m:1" aria-hidden="true"><span>I get</span></span>
-        <span class="ln" style="--c:4;--m:2" aria-hidden="true"><span>merchants</span></span>
-        <span class="ln" style="--c:2;--m:1" aria-hidden="true"><span>live on</span></span>
+        <span class="ln" style="--c:5;--m:2" aria-hidden="true"><span>merchants</span></span>
+        <span class="ln" style="--c:3;--m:1" aria-hidden="true"><span>live on</span></span>
         <span class="ln" style="--c:5;--m:2" aria-hidden="true"><span>payments,</span></span>
         <span class="ln" style="--c:3;--m:1" aria-hidden="true"><span>faster.</span></span>
       </h1>
@@ -83,9 +86,9 @@
     <section class="block statement" aria-labelledby="statement-title">
       <h2 class="stagger big" id="statement-title" aria-label="A good integration is the one nobody has to think about.">
         <span class="ln" style="--c:1;--m:1" aria-hidden="true"><span>a good</span></span>
-        <span class="ln" style="--c:4;--m:2" aria-hidden="true"><span>integration</span></span>
+        <span class="ln" style="--c:5;--m:2" aria-hidden="true"><span>integration</span></span>
         <span class="ln" style="--c:3;--m:1" aria-hidden="true"><span>is the one nobody</span></span>
-        <span class="ln" style="--c:6;--m:2" aria-hidden="true"><span>thinks about.</span></span>
+        <span class="ln" style="--c:5;--m:2" aria-hidden="true"><span>thinks about.</span></span>
       </h2>
 
       <div class="about grid">
@@ -108,19 +111,15 @@
 
       <dl class="figures">
         <div>
-          <dt>6+ yrs</dt>
-          <dd>in payments and fintech</dd>
-        </div>
-        <div>
-          <dt>24<span class="to">→</span>18</dt>
+          <dt>24<span class="to">→</span><span class="num" data-from="24" data-to="18">18</span></dt>
           <dd>days to integrate an enterprise merchant at PhonePe</dd>
         </div>
         <div>
-          <dt>45<span class="to">→</span>15</dt>
+          <dt>45<span class="to">→</span><span class="num" data-from="45" data-to="15">15</span></dt>
           <dd>days to integrate at Pine Labs, after new SOPs and checklists</dd>
         </div>
         <div>
-          <dt>30+</dt>
+          <dt><span class="num" data-to="30">30</span>+</dt>
           <dd>manual processes replaced with automation</dd>
         </div>
       </dl>
@@ -150,9 +149,9 @@
         <li>
           <details open>
             <summary>
-              <span class="c-year">2025–now</span>
               <span class="c-co">PhonePe</span>
               <span class="c-role">Lead Engineer, Enterprise Integrations/Solutions</span>
+              <span class="c-year">2025–now</span>
               <span class="c-plus" aria-hidden="true"></span>
             </summary>
             <ul class="points">
@@ -168,9 +167,9 @@
         <li>
           <details>
             <summary>
-              <span class="c-year">2024–25</span>
               <span class="c-co">Pine Labs</span>
               <span class="c-role">Senior Engineer, Integrations</span>
+              <span class="c-year">2024–25</span>
               <span class="c-plus" aria-hidden="true"></span>
             </summary>
             <ul class="points">
@@ -184,9 +183,9 @@
         <li>
           <details>
             <summary>
-              <span class="c-year">2023–24</span>
               <span class="c-co">Simpl</span>
               <span class="c-role">Product Engineer</span>
+              <span class="c-year">2023–24</span>
               <span class="c-plus" aria-hidden="true"></span>
             </summary>
             <ul class="points">
@@ -199,9 +198,9 @@
         <li>
           <details>
             <summary>
-              <span class="c-year">2022–23</span>
               <span class="c-co">Razorpay</span>
               <span class="c-role">Solutions Engineer</span>
+              <span class="c-year">2022–23</span>
               <span class="c-plus" aria-hidden="true"></span>
             </summary>
             <ul class="points">
@@ -214,9 +213,9 @@
         <li>
           <details>
             <summary>
-              <span class="c-year">2020–21</span>
               <span class="c-co">Concentrix</span>
               <span class="c-role">Associate Engineer (internship)</span>
+              <span class="c-year">2020–21</span>
               <span class="c-plus" aria-hidden="true"></span>
             </summary>
             <ul class="points">
@@ -231,7 +230,7 @@
     <section class="block" id="do" aria-labelledby="do-title">
       <h2 class="stagger big" id="do-title" aria-label="What I do">
         <span class="ln" style="--c:1;--m:1" aria-hidden="true"><span>what</span></span>
-        <span class="ln" style="--c:3;--m:2" aria-hidden="true"><span>I do</span></span>
+        <span class="ln" style="--c:5;--m:2" aria-hidden="true"><span>I do</span></span>
       </h2>
 
       <ul class="rows services">
@@ -271,27 +270,27 @@
 
       <ol class="steps">
         <li>
-          <span class="step-n">1</span>
+          <span class="step-n">Step 1 of 5</span>
           <h3>Discover</h3>
           <p>Workshops with client engineering to capture business requirements, aligned with sales and product.</p>
         </li>
         <li>
-          <span class="step-n">2</span>
+          <span class="step-n">Step 2 of 5</span>
           <h3>Design</h3>
           <p>An API and SDK blueprint: contracts, flows and error handling.</p>
         </li>
         <li>
-          <span class="step-n">3</span>
+          <span class="step-n">Step 3 of 5</span>
           <h3>Build</h3>
           <p>Integrate through REST APIs, SDKs and plugins, directly or via third-party platforms.</p>
         </li>
         <li>
-          <span class="step-n">4</span>
+          <span class="step-n">Step 4 of 5</span>
           <h3>Audit</h3>
           <p>Integration audits, code reviews and risk analysis before launch.</p>
         </li>
         <li>
-          <span class="step-n">5</span>
+          <span class="step-n">Step 5 of 5</span>
           <h3>Go live</h3>
           <p>Launch with sales and product, watch real-time dashboards, and feed merchant feedback back into the platform.</p>
         </li>
@@ -371,9 +370,9 @@
       <p class="meta clock-label">Bengaluru, IST</p>
 
       <h2 class="stagger big" id="contact-title" aria-label="Have an integration to scope? Let’s talk.">
-        <span class="ln" style="--c:4;--m:1" aria-hidden="true"><span>have an</span></span>
+        <span class="ln" style="--c:3;--m:1" aria-hidden="true"><span>have an</span></span>
         <span class="ln" style="--c:5;--m:2" aria-hidden="true"><span>integration</span></span>
-        <span class="ln" style="--c:6;--m:1" aria-hidden="true"><span>to scope?</span></span>
+        <span class="ln" style="--c:7;--m:2" aria-hidden="true"><span>to scope?</span></span>
       </h2>
 
       <div class="contact-row">
