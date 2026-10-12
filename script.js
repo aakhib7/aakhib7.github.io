@@ -225,7 +225,7 @@
         if (!entry.isIntersecting) return;
         var el = entry.target;
         el.classList.add('in');
-        if (el.classList.contains('figures')) each(el.querySelectorAll('.num'), countUp);
+        each(el.querySelectorAll('.num'), countUp);
         io.unobserve(el);
       });
     },
@@ -414,7 +414,7 @@
 
   // Magnetic buttons (mouse and trackpad only)
   if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
-    each(document.querySelectorAll('.circle, .pill, .menu-btn'), function (el) {
+    each(document.querySelectorAll('.circle, .pill, .menu-btn, .bar-cv'), function (el) {
       el.classList.add('magnet');
       el.addEventListener('pointermove', function (e) {
         var r = el.getBoundingClientRect();
