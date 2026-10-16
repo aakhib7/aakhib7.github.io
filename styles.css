@@ -707,8 +707,12 @@ img {
 /* Roles */
 .roles-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
+}
+
+.role-wide {
+  grid-column: span 2;
 }
 
 .role {
@@ -1414,6 +1418,9 @@ details[open] .t-chev {
   .roles-grid,
   .expertise-grid {
     grid-template-columns: minmax(0, 1fr);
+  }
+  .role-wide {
+    grid-column: auto;
   }
   .facts {
     grid-template-columns: repeat(2, minmax(0, 1fr));
