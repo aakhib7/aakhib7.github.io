@@ -7,23 +7,6 @@
     Array.prototype.forEach.call(list, fn);
   }
 
-  // ---------- Theme ----------
-  var themeBtn = document.querySelector('.theme-toggle');
-  function currentTheme() {
-    var t = root.getAttribute('data-theme');
-    if (t) return t;
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-  }
-  if (themeBtn) {
-    themeBtn.addEventListener('click', function () {
-      var next = currentTheme() === 'dark' ? 'light' : 'dark';
-      root.setAttribute('data-theme', next);
-      try {
-        localStorage.setItem('theme', next);
-      } catch (e) {}
-    });
-  }
-
   // ---------- Mobile menu ----------
   var menuBtn = document.querySelector('.menu-toggle');
   var menu = document.getElementById('mobile-menu');

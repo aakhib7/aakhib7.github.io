@@ -320,27 +320,6 @@ img {
   gap: 8px;
 }
 
-.theme-toggle .i-moon {
-  display: none;
-}
-
-:root[data-theme="dark"] .theme-toggle .i-sun {
-  display: none;
-}
-
-:root[data-theme="dark"] .theme-toggle .i-moon {
-  display: block;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .theme-toggle .i-sun {
-    display: none;
-  }
-  :root:not([data-theme="light"]) .theme-toggle .i-moon {
-    display: block;
-  }
-}
-
 .menu-toggle {
   display: none;
 }
