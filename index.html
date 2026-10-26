@@ -12,8 +12,8 @@
   <meta property="og:image" content="https://aakhib7.github.io/assets/og.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="color-scheme" content="light dark">
-  <meta name="theme-color" content="#f6f7fb" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#090d1a" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#fafafc" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#06070c" media="(prefers-color-scheme: dark)">
   <link rel="icon" href="assets/aakhib-avatar.jpg">
   <script>
     // Theme follows the browser/OS setting; clear any choice saved by the old toggle.
@@ -40,7 +40,8 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -86,7 +87,7 @@
       <div class="container hero-grid">
         <div class="hero-copy">
           <p class="status"><span class="pulse" aria-hidden="true"></span>Open to new roles in fintech</p>
-          <h1>Solutions and technical architect for payments.</h1>
+          <h1>Solutions and technical architect <span class="grad">for payments.</span></h1>
           <p class="lede">Lead Engineer at PhonePe. 6+ years in payment gateways and enterprise integrations. I lead a team of five and own an INR 600 Cr enterprise portfolio from discovery to go-live.</p>
           <div class="cta">
             <a class="btn btn-primary" href="Syed_Aakhib_Resume.pdf" download>
@@ -115,7 +116,7 @@
         <div class="hero-visual">
           <picture class="portrait">
             <source srcset="assets/aakhib.webp" type="image/webp">
-            <img src="assets/aakhib.jpg" width="720" height="900" alt="Syed Aakhib">
+            <img src="assets/aakhib.jpg" width="720" height="900" alt="Syed Aakhib" fetchpriority="high">
           </picture>
 
           <div class="golive" aria-label="Example merchant go-live checklist">
@@ -385,7 +386,7 @@
     <section class="section" id="contact" aria-labelledby="contact-title">
       <div class="container">
         <div class="contact-card reveal">
-          <img class="contact-avatar" src="assets/aakhib-avatar.jpg" width="72" height="72" alt="">
+          <img class="contact-avatar" src="assets/aakhib-avatar.jpg" width="72" height="72" alt="" loading="lazy">
           <h2 id="contact-title">Hiring a solutions or technical architect?</h2>
           <p>I’d like to hear about the role. Email is the quickest way to reach me.</p>
           <div class="cta cta-center">
@@ -407,6 +408,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
