@@ -836,7 +836,8 @@ img {
   white-space: nowrap;
 }
 
-.m-v .num {
+.m-v .num,
+.m-v .g {
   background: var(--grad);
   -webkit-background-clip: text;
   background-clip: text;
@@ -943,18 +944,43 @@ body {
 /* Roles */
 .roles-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 16px;
 }
 
-.role-wide {
-  grid-column: span 2;
-}
-
 .role {
+  position: relative;
+  grid-column: span 2;
   display: flex;
   flex-direction: column;
   padding: 26px;
+}
+
+/* the two headline roles: solutions and product */
+.role-lead {
+  grid-column: span 3;
+  padding: 30px;
+  background:
+    radial-gradient(120% 90% at 100% 0%, color-mix(in srgb, var(--a1) 10%, transparent), transparent 60%),
+    var(--surface);
+  border-color: color-mix(in srgb, var(--a1) 28%, var(--line));
+}
+
+.role-lead h3 {
+  font-size: 23px;
+}
+
+.focus {
+  position: absolute;
+  top: 26px;
+  right: 26px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--brand-soft);
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: 0.04em;
+  color: var(--a1);
 }
 
 .icon {
@@ -1673,7 +1699,8 @@ details[open] .t-chev {
   .roles-grid {
     grid-template-columns: minmax(0, 1fr);
   }
-  .role-wide {
+  .role,
+  .role-lead {
     grid-column: auto;
   }
   .facts {
